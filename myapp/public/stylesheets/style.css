@@ -1,0 +1,96 @@
+.bg-3 { 
+  background-color: #ffffff;
+  color: #555555;
+}
+.container-fluid {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+  color: #1abc9c !important;
+}
+.active>a {
+color: #1abc9c !important;;
+}
+
+.names{
+  padding-top: 70px;
+  padding-bottom: 70px;
+  color: #030000;
+}
+
+.bloc_infos{
+  background-color: #f8f8f8;
+  height:260px;
+}
+
+.wallet_infos{
+  background-color: #f8f8f8;
+  height:250px;
+}
+
+.bloc_transaction{
+  background-color: #f8f8f8;
+  height:400px;
+}
+
+#colonne1_info{
+  float:left;
+  width: 500px;
+  margin-right: 100px;
+  margin-left: 70px;
+}
+
+#colonne3_info{
+  float:right;
+  width: 200px;
+  margin-right: 250px;
+}
+
+#colonne2_info{
+  overflow: hidden;
+  width: 700px;
+  margin-right: 10px;
+  margin-left: 300px;
+}
+
+.transaction{
+  margin-left:70px;
+}
+
+h1 {
+  color: #bc1a58d8;
+  letter-spacing: 5px;
+  font-size:40px;
+}
+
+h2 {
+  margin-left:50px;
+  color: #bc1a58d8;
+  letter-spacing: 5px;
+  font-size:30px;
+}
+
+table {
+  border-collapse:collapse;
+  width:90%;
+  }
+ th, td {
+  border:1px solid #f8f8f8;
+  width:10%;
+  }
+ td {
+  text-align:center;
+  }
+ caption {
+  font-weight:bold
+  }
