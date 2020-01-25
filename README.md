@@ -68,13 +68,8 @@ A saisir dans un terminal, on utilise ici la commande apt-get (source: https://d
 
     sudo apt-get update
     sudo apt-get install nodejs npm
-
-### Installation dépendances utiles pour le projet
-    
-    cd backend
-    npm init -y
-    npm install express mongodb mongoose ethereumjs-tx ejs web3
     
 ### Lancement interface
     
-    node app.js
+    cd myapp
+    DEBUG=myapp:* npm start
