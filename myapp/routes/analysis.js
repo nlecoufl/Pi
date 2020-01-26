@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET workflow page. */
+/* GET about page. */
 router.get('/', function(req, res, next) {
-  res.render('workflow', {page:'Workflow', menuId:'workflow', text:"", history:""});
+  res.render('analysis', {page:'Analysis', menuId:'analysis', traitements:""});
 });
 
 module.exports = router;

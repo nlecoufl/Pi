@@ -21,3 +21,33 @@ fetch('/admin/clicks', {method: 'GET'})
     });
 }
 
+/* setInterval(function() {
+  fetch('/clicks', {method: 'GET'})
+    .then(function(response) {
+      if(response.ok) return response.json();
+      throw new Error('Request failed.');
+    })
+    .then(function(data) {
+      document.getElementById('history').innerHTML = JSON.stringify(data);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+}, 10000);
+*/
+
+
+/*
+function search(){
+  fetch('/workflow/search', {method: 'GET'})
+    .then(function(response) {
+      if(response.ok) return response.json();
+      throw new Error('Request failed.');
+    })
+    .then(function(data) {
+      document.getElementById('result').innerHTML = "Envoi : " + JSON.stringify(data);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+}*/

@@ -22,28 +22,28 @@
             <tr>
               <td>Faucet</td>
               <td>0xA08960F491c5caFac2029de4875Ce61309722a8b</td>
-              <td>0x91b03656521a2778dfe8b0d85e7b7db419095748cd4fa0635c22b26e190fd9f7</td>
+              <td>91b03656521a2778dfe8b0d85e7b7db419095748cd4fa0635c22b26e190fd9f7</td>
 
             </tr>
             <tr>
               <td>Wallet 1</td>
               <td>0xa54cb2870C7568a7f23B0135568119619c88C7e8</td>
-              <td>0xecf2aab506832addd019d1ea2ff13e0e6c701e58f69f1c4c91a19765df5c5ca8</td>
+              <td>ecf2aab506832addd019d1ea2ff13e0e6c701e58f69f1c4c91a19765df5c5ca8</td>
             </tr>
             <tr>
               <td>Wallet 2</td>
               <td>0x5a2FBcbD1C3451A54828c9d4EC873de2A24ba970</td>
-              <td>0xcb5a45f071ba45aad496f7db9fce49d087595c999eb455b40bf887a517971451</td>
+              <td>cb5a45f071ba45aad496f7db9fce49d087595c999eb455b40bf887a517971451</td>
             </tr>
             <tr>
               <td>Wallet 3</td>
               <td>0xE943a98E2116fE22faA7F3169551Cc0559CAc11e</td>
-              <td>0x96be9499a8fc69a4bea6786287a1fc50d21ae72db06e279417424f0008c82057</td>
+              <td>96be9499a8fc69a4bea6786287a1fc50d21ae72db06e279417424f0008c82057</td>
             </tr>
             <tr>
               <td>Wallet 4</td>
               <td>0xf6566dD46c029049F8deF17506bc702B077f035E</td>
-              <td>0x61d3990cc09b3145e802b44f32b20203699327ba2f908cdc91c8bccd1b6c8a41</td>
+              <td>61d3990cc09b3145e802b44f32b20203699327ba2f908cdc91c8bccd1b6c8a41</td>
             </tr>
           </table>        
     </div>
@@ -54,16 +54,18 @@
         <h2>Informations</h2><hr>
         
             <div id="colonne1_info">
-                <h3>Pré-transaction timestamp : </h3>
+                <h3>Début des traitements timestamp : </h3>
+                <p>(Permet de remplir le champ date_envoi, correspondant au moment où le transporteur arrive dans le lieu de traitement)</p>
                 <button onclick="timestamp(event)">Get actual timestamp</button>
                 <p><span id="timestamp"></span></p>
             </div>
 
             <div id="colonne3_info">
-                <form method='POST' action='/admin/balance'>
+                <form method='POST' action='/admin'>
                     <h3>Get Balance : <span id="balance"></span></h3>
                     <input type="text" name="addr" placeholder="address">
                     <button >Get balance</button>
+                    <div><%- msg %></div>
                 </form>
             </div>
 

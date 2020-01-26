@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <% include head %> 
+	<% include head %> 
 </head>
 <body>
-<% include menu %>
+	<% include menu %>
+	<div class="container-fluid bg-3 text-center">    
+		<h1><%= page %></h1>
+		<hr>  
+		<table style="margin: auto;">
+			<tr>
+				<th>
+					<div class="card">
+						<div class="card-body" style="height : 30vh;">
+							Tracker un shipping par ID
+							<div class="input-group mb-3">
+								<form action="/workflow" method="POST">
+									<input type="text" name="mytext" required />
+									<input type="submit" value="Submit" />
+								</form>
+							</div> 
+						<br>
+						<hr>
+						<div class="text"><%- text %></div>
+						</div>
+							
+				</div>
+					<div class="card">
+						<div class="card-body" style=" height : 30vh;">
+							Historique de transactions
+						<hr>
+						<div class="history"><%- history %></div>
+						</div>
+					</div>
+				</th>
+				<th>
+					<span class="dot" style="margin-left: 15vw; margin-top: 0vh;text-align: center; color: black;">W1</span>
+					<span class="dot" style="margin-left: 15vw; margin-top: 10vh;text-align: center; color: black;">W2</span>
+					<span class="dot" style="margin-left: 15vw; margin-top: 10vh;text-align: center; color: black;">W3</span>
+					<span class="dot" style="margin-left: 15vw; margin-top: 10vh;text-align: center; color: black;">W4</span>
+				</th>
 
-<div class="container-fluid bg-3 text-center">    
-  <h1><%= page %></h1>
-  <hr>  
-</div>
+			</tr>
+		</table>
+	</div>
 </body>
 <% include script %>
 </html>
