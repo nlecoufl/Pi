@@ -16,8 +16,8 @@ Il faut avoir installer homebrow puis:
 ## 2 - Paramètrage Blockchain
 D'abord cloner le repo dans le repo de votre choix :
 
-    git clone https://github.com/nlecoufl/PI2/
-    cd PI2
+    git clone https://github.com/nlecoufl/Pi/
+    cd Pi
 Pour démarrer notre blockchain privée, nous devons créer le tout premier bloc, le bloc Genesis, le seul qui ne sera pas lié à un bloc précédent.
 Le fichier de configuration de ce bloc se trouve ici
 --> [genesis.json](https://github.com/nlecoul/PI2/master/genesis.json)
