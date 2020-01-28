@@ -14,7 +14,7 @@ Il faut avoir installer homebrow puis:
     brew tap ethereum/ethereum
     brew install ethereum
     
-### MongoDB
+### MongoDB (Linux)
 Importer la clé publique :
 
     sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 68818C72E52529D4
@@ -30,6 +30,11 @@ Lancer mongodb :
 
     sudo service mongod start 
     mongo
+    
+### Nodejs/npm (Linux)
+A saisir dans un terminal, on utilise ici la commande apt-get (source: https://doc.ubuntu-fr.org/nodejs):
+
+    sudo apt-get install nodejs npm
 
 ## 2 - Paramètrage Blockchain
 D'abord cloner le repo dans le repo de votre choix :
@@ -58,7 +63,7 @@ Si vous regardez en détail la commande ci dessus, vous verrez qu’elle contien
 - txpool : pour vérifier si des transactions sont en attente de validation
 
 ## 3 - Utilisation console
-Dans un nouveau terminal :
+Avant de lancer l'application, ouvrons un nouveau terminal et connectons nous à la blockchain:
 
     geth attach http://127.0.0.1:8545
 Pour commencer à miner, il faut définir le compte par défaut qui recevra les ether avec le plugin ‘miner’ :
@@ -72,7 +77,7 @@ Démarrons donc le minage :
     miner.start()
 Au tout premier lancement de nombreuses informations s’afficheront dans la console, laissez faire quelques minutes.
 
-Vous pouvez ensuite couper le mineur :
+Vous pouvez ensuite couper le mineur (mais il sera nécessaire pour faire fonctionner l'application):
 
     miner.stop()
 Puis redemander le solde du compte par défaut qui doit maintenant être bien supérieur à 0 :
@@ -81,13 +86,16 @@ Puis redemander le solde du compte par défaut qui doit maintenant être bien su
 L’autre moyen de vérifier que votre mineur tourne bien est de lancer la commande eth.hashrate qui affichera le hashrate de votre blockchain privée.
 
 ## 4 - Back-end / Front-End
-### Installation Nodejs/npm (Linux)
-A saisir dans un terminal, on utilise ici la commande apt-get (source: https://doc.ubuntu-fr.org/nodejs):
-
-    sudo apt-get update
-    sudo apt-get install nodejs npm
     
 ### Lancement interface
     
     cd myapp
     DEBUG=myapp:* npm start
+    
+L'application contient plusieurs onglets : 
+* Home : Simple page d'accueil.
+* Admin : Page d'administration permettant d'envoyer les produits. Les transactions sont envoyés sur la blockchain ethereum, et les informations de ces transactions sont enregistrées en parallèle sur MongoDB.
+* Workflow : Page permettant de visualiser l'historique d'un workflow.
+* Analysis (EN COURS) : Page permettant d'analyser, par exemple, la moyenne des temps de trajet entre deux acteurs du workflow.
+* About Us
+* Contact Us
