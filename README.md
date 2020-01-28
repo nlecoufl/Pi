@@ -32,8 +32,6 @@ Lancer mongodb :
     mongo
     
 ### Nodejs/npm (Linux)
-A saisir dans un terminal, on utilise ici la commande apt-get (source: https://doc.ubuntu-fr.org/nodejs):
-
     sudo apt-get install nodejs npm
 
 ## 2 - Paramètrage Blockchain
