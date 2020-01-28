@@ -222,18 +222,49 @@ app.get('/clicks', (req, res) => {
 });
 });*/
 
-// get shippind data
+/*
+// get shipping data
 app.post('/analysis', function(req, res){ 
-  var id_shipp=req.body.mytext;
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("test");    
-    dbo.collection("Status").find({id_shipping: id_shipp}).project({_id: 0, id_shipping:0}).toArray((err, result) => {
-        res.render('analysis',{ page:'Analysis', menuId:'analysis', traitements: JSON.stringify(result)}); 
+    dbo.collection("Transactions").find({from: '0xa54cb2870C7568a7f23B0135568119619c88C7e8', to:'0x5a2FBcbD1C3451A54828c9d4EC873de2A24ba970'}).project({_id: 0, id_shipping:0, from:0,to:0,amount:0}).toArray((err, result) => {
+        //res.render('analysis',{ page:'Analysis', menuId:'analysis', traitements: JSON.stringify(result)}); 
+      dbo.collection("Status").find({hash: result[0].hash}).project({_id: 0}).toArray((err, resultat) => {
+        var time=0;
+        time+=resultat[0].date_envoi;
+        console.log(time);
+        res.send(JSON.stringify(time));
         db.close();
-      });
+      });         
     });
+  });
 });
+*/
+
+/* // get shipping data
+app.post('/analysis', function(req, res){ 
+  MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("test");    
+    dbo.collection("Transactions").find({from: '0xa54cb2870C7568a7f23B0135568119619c88C7e8', to:'0x5a2FBcbD1C3451A54828c9d4EC873de2A24ba970'}).project({_id: 0, id_shipping:0, from:0,to:0,amount:0}).toArray((err, result) => {
+        //res.render('analysis',{ page:'Analysis', menuId:'analysis', traitements: JSON.stringify(result)}); 
+      var time=0;
+      for (let pas = 0; pas < result.length; pas++){
+        dbo.collection("Status").find({hash: result[pas].hash}).project({_id: 0}).toArray((err, resultat) => {
+          
+          console.log(JSON.stringify(resultat[0].date_envoi));
+        
+          });
+      }
+      res.send(JSON.stringify(time));
+      db.close();        
+    });
+  });
+});
+*/
+
+
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------//
 

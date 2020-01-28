@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <% include head %> 
+	<% include head %> 
 </head>
 <body>
-<% include menu %>
+	<% include menu %>
 
-<div class="container-fluid bg-3 text-center">    
-  <h1><%= page %></h1>
-  <hr>  
+	<div class="container-fluid bg-3 text-center">    
+		<h1><%= page %></h1>
+		<hr>  
 
-  <div class="names">
-      <h4>François TRANCART : IF - Fintech</h4><br>
-      <h4>Nicolas LECOUFLET : IF - Fintech</h4><br>
-      <h4>Gaya AOUES : IBO - Fintech</h4><br>
-      <h4>Rémi SINNO : IF - Data Science</h4>
-  </div>
-</div>
+		<div class="names">
+			<table style="margin: auto;">
+				<tr >
+					<td style="padding-bottom: 50px;">
+						<h4>François TRANCART : IF - Fintech</h4>
+						<a href="https://www.linkedin.com/in/fran%C3%A7ois-trancart-37964810b/">
+							<img src="images/logoLinkedin.jpg"> 
+						</a>
+					</td>
+					<td style="padding-bottom: 50px;">
+						<h4>Nicolas LECOUFLET : IF - Fintech</h4>
+						<a href="https://www.linkedin.com/in/nicolas-lecouflet/">
+							<img src="images/logoLinkedin.jpg"> 
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h4>Gaya AOUES : IBO - Fintech</h4>
+						<a href="https://www.linkedin.com/in/gaya-aoues-243241150/">
+							<img src="images/logoLinkedin.jpg"> 
+						</a>
+					</td>
+					<td>
+						<h4>Rémi SINNO : IF - Data Science</h4>
+						<a href="https://www.linkedin.com/in/remi-sinno-datascience/">
+							<img src="images/logoLinkedin.jpg"> 
+						</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
 </body>
 <% include script %>
 </html>

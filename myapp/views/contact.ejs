@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <% include head %> 
+	<% include head %> 
 </head>
 <body>
-<% include menu %>
+	<% include menu %>
 
-<div class="container-fluid bg-3 text-center">    
-  <h1><%= page %></h1>
-  <hr>  
-</div>
-</body>
-<% include script %>
-</html>
+	<div class="container-fluid bg-3 text-center">    
+		<h1><%= page %></h1>
+		<hr>  <br>
+
+		<table style="margin:auto;">
+			<tr>
+				<td style="width: 30%;">
+					<div class="card">
+						<div class="card-body" style="height : 70vh;">
+							<h3 style="font-weight: bold;">NeuroChain</h3>
+								<h3>92 Av. des Champs-Élysées<br>
+									75008 Paris<br>
+									France
+								</h3>
+								<button class="btn btn-primary" href="mailto:contact@neurochaintech.io" style="font-weight: bold;">Contact par mail</button> <br> <br> <br>
+								<h3> Frederic GOUJON (CEO) </h3>
+								<a href="https://www.linkedin.com/in/fredericgoujon/">
+									<img src="images/logoLinkedin.jpg"> 
+								</a>
+
+							</div>
+						</div>
+					</td>
+					<td>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.219948031925!2d2.3006808753681867!3d48.87171394008469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66ff93ed36dfb%3A0x33cce3703d31a99d!2sWeWork%2092%20Av.%20des%20Champs-%C3%89lys%C3%A9es!5e0!3m2!1sfr!2sfr!4v1580077605095!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+	<% include script %>
+	</html>

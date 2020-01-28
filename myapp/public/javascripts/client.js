@@ -21,21 +21,21 @@ fetch('/admin/clicks', {method: 'GET'})
     });
 }
 
-/* setInterval(function() {
-  fetch('/clicks', {method: 'GET'})
+/* 
+setInterval(function() {
+  fetch('/analysis', {method: 'POST'})
     .then(function(response) {
       if(response.ok) return response.json();
       throw new Error('Request failed.');
     })
     .then(function(data) {
-      document.getElementById('history').innerHTML = JSON.stringify(data);
+      document.getElementById('traitements').innerHTML = JSON.stringify(data);
     })
     .catch(function(error) {
       console.log(error);
     });
-}, 10000);
+}, 2000);
 */
-
 
 /*
 function search(){

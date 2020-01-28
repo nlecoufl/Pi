@@ -45,7 +45,7 @@ color: #1abc9c !important;;
 
 #colonne1_info{
   float:left;
-  width: 500px;
+  width: 580px;
   margin-right: 100px;
   margin-left: 70px;
 }
@@ -213,4 +213,10 @@ caption {
 
 #history{
   font-size:10px;
+}
+
+.btn-primary{
+  color:#fff;
+  background-color:#007bff;
+  border-color:#007bff;
 }
