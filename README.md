@@ -1,17 +1,35 @@
 # PI2
 
-## 1 - Download ethereum
-### Linux
+## 1 - Installations
+### Ethereum
+#### Linux
     sudo add-apt-repository -y ppa:ethereum/ethereum
     sudo apt-get update
     sudo apt-get install ethereum
-### Windows
+#### Windows
 Il suffit de télécharger l'éxecutable trouvable ici : https://geth.ethereum.org/downloads/
-### Mac
+#### Mac
 Il faut avoir installer homebrow puis:
 
     brew tap ethereum/ethereum
     brew install ethereum
+    
+### MongoDB
+Importer la clé publique :
+
+    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 68818C72E52529D4
+Ajouter la ligne "deb http://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" à mongodb-org-4.0.list :
+
+    sudo echo "deb http://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
+    
+Installer :
+
+    sudo apt-get update
+    sudo apt-get install -y mongodb-org
+Lancer mongodb :
+
+    sudo service mongod start 
+    mongo
 
 ## 2 - Paramètrage Blockchain
 D'abord cloner le repo dans le repo de votre choix :
